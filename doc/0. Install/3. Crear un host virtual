@@ -1,0 +1,43 @@
+Crear un host virtual
+
+Un hosti virtual simula un servidor real de forma que al entrar a la URL entrariamos al diminio configurado.
+
+Para crear un host virtual debemos ir a la carpeta del servidor 
+
+La ruta que podremos utilizar es:
+
+ C:\AppServ\Apache24\conf\httpd.conf
+
+ Abrimos con cualquier editor que tengamos
+
+ buscando 
+
+ # Virtual hosts
+
+ Descomentar
+ # Include conf/extra/httpd-vhosts.conf
+a:
+Include conf/extra/httpd-vhosts.conf
+
+En este archivo estaran configurado los host virtuales.
+
+Ir ahora a la carpeta 
+	/extra
+
+abrimos el archivo
+	httpd-vhosts.conf
+
+Agregamos al final del archivo
+#Vhost Laravel 5 Windows
+<VirtualHost *:80>
+    ServerAdmin dev@klvst3r.io
+    DocumentRoot "C:\AppServ\www\Udemy\Laravel5\public"
+    ServerName klvst3r.io
+    ServerAlias www.klvst3r.io
+    <Directory "C:\AppServ\www\Udemy\Laravel5\public">
+    	Options Indexes FollowSymLinks
+    	AllowOverride All
+    	Order Deny, Allo
+    	Allow from all
+    </Directory>
+</VirtualHost>

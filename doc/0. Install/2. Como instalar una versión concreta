@@ -1,0 +1,11 @@
+Como instalar una versión concreta
+
+Todas las versiones de Laravel 5 son iguales, se programa exactamente igual en todas, pero quizas puedan existir algunos micro cambios muy muy pequeños de una versión a otra, para instalar una versión especifica de Laravel debes lanzar el comando:
+
+composer create-project laravel/laravel proyecto "5.2.*" 
+
+Donde proyecto, es el nombre de tu proyecto.
+
+Y donde 5.2, es la versión que eliges.
+
+En el curso yo utilizo esta versión porque es una de las mas estables y que mejor funciona, y ya te digo la manera de programar es igual en esta que en la 5.3, 5.4 y 5.5.
